@@ -3,12 +3,12 @@
     "description": "工具",
     "type": "library",
     "keywords": [
-        "warrior"
+        "darkwarrior"
     ],
     "license": "MIT",
     "authors": [
         {
-            "name": "warrior",
+            "name": "darkwarrior",
             "email": "1207275734@qq.com"
         }
     ],
