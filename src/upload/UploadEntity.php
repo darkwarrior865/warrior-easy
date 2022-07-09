@@ -1,5 +1,5 @@
 <?php
-namespace warrior\easy\upload;
+namespace darkwarrior\easy\upload;
 
 /**
  * class UploadEntity

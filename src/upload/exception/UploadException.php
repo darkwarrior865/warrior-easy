@@ -1,5 +1,5 @@
 <?php
-namespace warrior\easy\upload\exception;
+namespace darkwarrior\easy\upload\exception;
 
 use think\Exception;
 

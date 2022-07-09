@@ -1,7 +1,7 @@
 <?php
-namespace warrior\easy\upload\driver;
+namespace darkwarrior\easy\upload\driver;
 
-use warrior\easy\upload\exception\UploadException;
+use darkwarrior\easy\upload\exception\UploadException;
 
 /**
  * class Local

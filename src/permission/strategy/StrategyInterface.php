@@ -1,5 +1,5 @@
 <?php
-namespace warrior\easy\permission\strategy;
+namespace darkwarrior\easy\permission\strategy;
 
 /**
  * class StrategyInterface

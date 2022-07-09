@@ -1,5 +1,5 @@
 <?php
-namespace warrior\easy\permission\exception;
+namespace darkwarrior\easy\permission\exception;
 
 use think\Exception;
 

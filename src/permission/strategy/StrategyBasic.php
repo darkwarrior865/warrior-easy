@@ -1,7 +1,7 @@
 <?php
-namespace warrior\easy\permission\strategy;
+namespace darkwarrior\easy\permission\strategy;
 
-use warrior\easy\permission\Config;
+use darkwarrior\easy\permission\Config;
 
 /**
  * class StrategyBasic

@@ -1,9 +1,8 @@
 <?php
-namespace warrior\easy\permission;
+namespace darkwarrior\easy\permission;
 
-use think\facade\Db;
-use warrior\easy\permission\exception\PermissionException;
-use warrior\easy\permission\Config;
+use darkwarrior\easy\permission\exception\PermissionException;
+use darkwarrior\easy\permission\Config;
 
 /**
  * class Permission
@@ -64,7 +63,7 @@ class Permission
      */
     private function createStrategy(string $strategy = '')
     {
-        $class = '\\warrior\\easy\\permission\\strategy\\' . $strategy;
+        $class = '\\darkwarrior\\easy\\permission\\strategy\\' . $strategy;
         if (!class_exists($class)) {
             throw new PermissionException('查询框架策略类未定义！');
         }
@@ -72,11 +71,11 @@ class Permission
         $strategyEntity = new $class($this->config);
 
         // 是否实现了StrategyInterface接口
-        if (!($strategyEntity instanceof \warrior\easy\permission\strategy\StrategyInterface)) {
+        if (!($strategyEntity instanceof \darkwarrior\easy\permission\strategy\StrategyInterface)) {
             throw new PermissionException('查询框架策略类异常！');
         }
         // 是否继承了StrategyBasic
-        if (!($strategyEntity instanceof \warrior\easy\permission\strategy\StrategyBasic)) {
+        if (!($strategyEntity instanceof \darkwarrior\easy\permission\strategy\StrategyBasic)) {
             throw new PermissionException('查询框架策略类异常！');
         }
 
@@ -101,6 +100,10 @@ class Permission
         // 是否开启了验证
         if (!$this->config->authOn) {
             return true;
+        }
+
+        if (empty($this->ruleArray[$user_id])) {
+            return false;
         }
 
         // 获取用户的所有有效规则列表
@@ -199,7 +202,7 @@ class Permission
      */
     public function getAliasArray(int $userId = 0): array
     {
-        return $this->aliasArray[$userId];
+        return isset($this->aliasArray[$userId]) ? $this->aliasArray[$userId] : [];
     }
 
     /**

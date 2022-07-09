@@ -1,7 +1,7 @@
 <?php
-namespace warrior\easy\upload;
+namespace darkwarrior\easy\upload;
 
-use warrior\upload\exception\UploadException;
+use darkwarrior\upload\exception\UploadException;
 
 /**
  * class UploadClient
@@ -45,7 +45,7 @@ class UploadClient
     public function upload()
     {
         // 实例化上传适配器
-        $Upload = new \warrior\easy\upload\Upload(
+        $Upload = new \darkwarrior\easy\upload\Upload(
             $this->uploadEntity->getUploadConfig(),
             $this->uploadEntity->getDriverConfig()
         );

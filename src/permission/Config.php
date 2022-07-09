@@ -1,5 +1,5 @@
 <?php
-namespace warrior\easy\permission;
+namespace darkwarrior\easy\permission;
 
 /**
  * class Config

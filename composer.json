@@ -13,12 +13,14 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "phpoffice/phpexcel": "~1.8.2",
+        "phpmailer/phpmailer": "~6.6.3"
     },
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "warrior\\easy\\": "src/"
+            "darkwarrior\\easy\\": "src/"
         }
     }
 }

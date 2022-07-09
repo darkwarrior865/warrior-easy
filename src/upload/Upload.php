@@ -1,7 +1,7 @@
 <?php
-namespace warrior\easy\upload;
+namespace darkwarrior\easy\upload;
 
-use warrior\easy\upload\exception\UploadException;
+use darkwarrior\easy\upload\exception\UploadException;
 
 /**
  * class Upload
@@ -279,7 +279,7 @@ class Upload
         
         $driver_config = $driverConfig ? : [];
         
-        $class  = strpos($driver, '\\') ? $driver : 'warrior\\easy\\upload\\driver\\' . ucfirst(strtolower($driver));
+        $class  = strpos($driver, '\\') ? $driver : 'darkwarrior\\easy\\upload\\driver\\' . ucfirst(strtolower($driver));
 
         if (!class_exists($class)) {
             throw new UploadException("不存在上传驱动：{$driver}");

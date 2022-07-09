@@ -1,8 +1,8 @@
 <?php
-namespace warrior\easy\permission\strategy;
+namespace darkwarrior\easy\permission\strategy;
 
-use warrior\easy\permission\strategy\StrategyInterface;
-use warrior\easy\permission\strategy\StrategyBasic;
+use darkwarrior\easy\permission\strategy\StrategyInterface;
+use darkwarrior\easy\permission\strategy\StrategyBasic;
 use think\facade\Db;
 
 /**
@@ -54,6 +54,6 @@ class Tp6 extends StrategyBasic implements StrategyInterface
         if (empty($ruleIdArray)) {
             return [];
         }
-        return Db::name($this->config->tableRule)->whereIn('id', $ruleIdArray)->where('status', 1)->select()->toArray();
+        return Db::name($this->config->tableRule)->whereIn('id', $ruleIdArray)->where('status', 1)->order('sort ASC,id DESC')->select()->toArray();
     }
 }
