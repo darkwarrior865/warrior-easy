@@ -1,5 +1,5 @@
 <?php
-namespace darkwarrior\easy\juchen;
+namespace darkwarrior\easy\email;
 
 /**
  * class SendBody
@@ -15,10 +15,16 @@ class SendBody
     private $receiver;
 
     /**
-     * [$message description]
+     * [$subject description]
      * @var [type]
      */
-    private $message;
+    private $subject;
+
+    /**
+     * [$body description]
+     * @var [type]
+     */
+    private $body;
 
     /**
      * [setReceiver description]
@@ -43,24 +49,46 @@ class SendBody
     }
 
     /**
-     * [setMessage description]
+     * [setSubject description]
      * @Author   黑暗中的武者
-     * @DateTime 2022-07-09T09:02:48+0800
+     * @DateTime 2022-07-12T09:43:59+0800
      * @param    string                   $value [description]
      */
-    public function setMessage(string $value = ''): void
+    public function setSubject(string $value = ''): void
     {
-        $this->message = $value;
+        $this->subject = $value;
     }
 
     /**
-     * [getMessage description]
+     * [getSubject description]
      * @Author   黑暗中的武者
-     * @DateTime 2022-07-09T09:02:50+0800
+     * @DateTime 2022-07-12T09:44:02+0800
      * @return   [type]                   [description]
      */
-    public function getMessage(): string
+    public function getSubject(): string
     {
-        return $this->message;
+        return $this->subject;
+    }
+
+    /**
+     * [setBody description]
+     * @Author   黑暗中的武者
+     * @DateTime 2022-07-12T09:44:14+0800
+     * @param    string                   $value [description]
+     */
+    public function setBody(string $value = ''): void
+    {
+        $this->body = $value;
+    }
+
+    /**
+     * [getBody description]
+     * @Author   黑暗中的武者
+     * @DateTime 2022-07-12T09:44:16+0800
+     * @return   [type]                   [description]
+     */
+    public function getBody(): string
+    {
+        return $this->body;
     }
 }

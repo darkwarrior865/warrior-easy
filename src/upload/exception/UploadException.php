@@ -1,15 +1,13 @@
 <?php
 namespace darkwarrior\easy\upload\exception;
 
-use think\Exception;
-
 /**
  * class UploadException
  * 用于封装上传时 出现的错误异常
  * @Author   黑暗中的武者
  * @DateTime 2019-06-27T14:24:06+0800
  */
-class UploadException extends Exception
+class UploadException extends \Exception
 {
     /**
      * [__construct 错误异常构造函数]

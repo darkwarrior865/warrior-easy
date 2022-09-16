@@ -27,6 +27,28 @@ class Config
     private $password;
 
     /**
+     * [setApiUrl description]
+     * @Author   黑暗中的武者
+     * @DateTime 2022-07-08T17:54:03+0800
+     * @param    string                   $value [description]
+     */
+    public function setApiUrl(string $value = ''): void
+    {
+        $this->apiUrl = $value;
+    }
+
+    /**
+     * [getApiUrl description]
+     * @Author   黑暗中的武者
+     * @DateTime 2022-07-08T17:54:06+0800
+     * @return   [type]                   [description]
+     */
+    public function getApiUrl(): string
+    {
+        return $this->apiUrl;
+    }
+    
+    /**
      * [setUsername description]
      * @Author   黑暗中的武者
      * @DateTime 2022-07-08T17:46:22+0800
@@ -68,27 +90,5 @@ class Config
     public function getPassword(): string
     {
         return $this->password;
-    }
-
-    /**
-     * [setApiUrl description]
-     * @Author   黑暗中的武者
-     * @DateTime 2022-07-08T17:54:03+0800
-     * @param    string                   $value [description]
-     */
-    public function setApiUrl(string $value = ''): void
-    {
-        $this->apiUrl = $value;
-    }
-
-    /**
-     * [getApiUrl description]
-     * @Author   黑暗中的武者
-     * @DateTime 2022-07-08T17:54:06+0800
-     * @return   [type]                   [description]
-     */
-    public function getApiUrl(): string
-    {
-        return $this->apiUrl;
     }
 }

@@ -1,12 +1,10 @@
 <?php
 namespace darkwarrior\easy\permission\exception;
 
-use think\Exception;
-
 /**
  * 
  */
-class PermissionException extends Exception
+class PermissionException extends \Exception
 {
     /**
      * [__construct 错误异常构造函数]

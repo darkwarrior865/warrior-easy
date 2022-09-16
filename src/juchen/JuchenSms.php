@@ -49,7 +49,7 @@ class JuchenSms
                 'username'   => $this->config->getUsername(),
                 'passwd'     => $this->config->getPassword(),
                 'phone'      => $this->sendBody->getReceiver(),
-                'msg'        => $this->sendBody->getContent(),
+                'msg'        => $this->sendBody->getMessage(),
                 'needstatus' => 'true',
                 'port'       => '',
                 'sendtime'   => ''
